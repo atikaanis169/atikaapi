@@ -17,10 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-response = WS.sendRequest(findTestObject('Method POST/palbums'))
+GlobalVariable.title = 'bululu'
+GlobalVariable.body = 'testing1'
+
+response = WS.sendRequest(findTestObject('POST/posts'))
 
 WS.verifyResponseStatusCode(response, 201)
+WS.verifyElementPropertyValue(response, 'title', 'bululu')
+WS.verifyElementPropertyValue(response, 'body', 'testing1')
 
-WS.verifyElementPropertyValue(response, 'id', '101')
+GlobalVariable.title = 'manis'
+GlobalVariable.body = 'testing2'
+
+response1 = WS.sendRequest(findTestObject('POST/posts'))
+
+WS.verifyResponseStatusCode(response1, 201)
+WS.verifyElementPropertyValue(response1, 'title', 'manis')
+WS.verifyElementPropertyValue(response1, 'body', 'testing2')
 
 
