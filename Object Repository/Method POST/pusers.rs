@@ -10,8 +10,8 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;: 11\n}\n&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;id\&quot;: \&quot;1\&quot;,\n   \&quot;name\&quot;: \&quot;${GlobalVariable.name}\&quot;,\n   \&quot;username\&quot;: \&quot;${GlobalVariable.username}\&quot;,\n   \&quot;email\&quot;: \&quot;${GlobalVariable.email}\&quot;,\n   \&quot;street\&quot;: \&quot;${GlobalVariable.street}\&quot;,\n   \&quot;suite\&quot;: \&quot;${GlobalVariable.suite}\&quot;,\n   \&quot;city\&quot;: \&quot;${GlobalVariable.city}\&quot;,\n   \&quot;zipcode\&quot;: \&quot;${GlobalVariable.zipcode}\&quot;,\n   \&quot;lat\&quot;: \&quot;${GlobalVariable.lat}\&quot;,\n   \&quot;lng\&quot;: \&quot;${GlobalVariable.lng}\&quot;,\n   \&quot;phone\&quot;: \&quot;${GlobalVariable.phone}\&quot;,\n   \&quot;website\&quot;: \&quot;${GlobalVariable.website}\&quot;,\n   \&quot;company\&quot;: \&quot;${GlobalVariable.company}\&quot;,\n   \&quot;catchPhrase\&quot;: \&quot;${GlobalVariable.catchPhrase}\&quot;,\n   \&quot;bs\&quot;: \&quot;${GlobalVariable.bs}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -20,7 +20,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <katalonVersion>8.1.0</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>

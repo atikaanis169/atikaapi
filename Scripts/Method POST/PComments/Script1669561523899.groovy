@@ -23,3 +23,27 @@ WS.verifyResponseStatusCode(response, 201)
 
 WS.verifyElementPropertyValue(response, 'id', '501')
 
+GlobalVariable.title = 'bokululu'
+
+GlobalVariable.body = 'teskkkkting1'
+
+response = WS.sendRequest(findTestObject('Method GET/comments'))
+
+WS.verifyResponseStatusCode(response, 201)
+
+WS.verifyElementPropertyValue(response, 'title', 'bokululu')
+
+WS.verifyElementPropertyValue(response, 'body', 'teskkkkting1')
+
+GlobalVariable.title = 'manis1'
+
+GlobalVariable.body = 'testing21'
+
+response1 = WS.sendRequest(findTestObject('Method GET/comments'))
+
+WS.verifyResponseStatusCode(response1, 201)
+
+WS.verifyElementPropertyValue(response1, 'title', 'manis1')
+
+WS.verifyElementPropertyValue(response1, 'body', 'testing21')
+
