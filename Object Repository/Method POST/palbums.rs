@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[{\n \&quot;title\&quot;:\&quot;atika\&quot;,\n \&quot;body\&quot; : \&quot; one\&quot;,\n \&quot;userId\&quot; : \&quot;1\&quot;\n},\n{\n \&quot;title\&quot;:\&quot;anis\&quot;,\n \&quot;body\&quot; : \&quot; two\&quot;,\n \&quot;userId\&quot; : \&quot;2\&quot;\n}]\n\n&quot;,
+  &quot;text&quot;: &quot;{\n \&quot;title\&quot;:\&quot;$(GlobalVariable.title)\&quot;,\n \&quot;userId\&quot; : 1,\n \&quot;Id\&quot; : 1\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -50,8 +50,9 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 WS.verifyResponseStatusCode(response, 201)
 
-
-WS.verifyElementPropertyValue(response, 'id', '101')
-WS.verifyElementPropertyValue(response, 'id', '102')</verificationScript>
+WS.verifyElementPropertyValue(response, 'title', 'atika')
+WS.verifyElementPropertyValue(response, 'body', 'katalon')
+WS.verifyElementPropertyValue(response, 'userId', '1')
+WS.verifyElementPropertyValue(response, 'id', '101')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
